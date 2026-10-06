@@ -1,0 +1,14 @@
+{
+  "source_repository": "https://github.com/soloztech/marketing-center",
+  "source_commit": "7cdc573dc9bd86ec4481c76cf92800fff934d901",
+  "paths": {
+    "marketing_center_catalog_contact_center": "content_center_contact_center",
+    "marketing_center_catalog_sale": "content_center_sale",
+    "marketing_center_catalog": "content_center_base"
+  },
+  "license": "AGPL-3",
+  "technical_models_preserved": [
+    "marketing.center.catalog.subject",
+    "marketing.center.catalog.item"
+  ]
+}

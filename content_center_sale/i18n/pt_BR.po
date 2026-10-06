@@ -1,0 +1,31 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* content_center_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-11 17:38+0000\n"
+"PO-Revision-Date: 2026-09-11 17:38+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: content_center_sale
+#: model_terms:ir.ui.view,arch_db:content_center_sale.view_order_form_content_catalog
+msgid "Content Catalog"
+msgstr "Catálogo de Conteúdo"
+
+#. module: content_center_sale
+#: model:ir.model,name:content_center_sale.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venda"
+#. module: content_center_sale
+#: model:ir.module.module,shortdesc:base.module_content_center_sale
+msgid "Content Center - Sales"
+msgstr "Central de Conteúdo - Vendas"

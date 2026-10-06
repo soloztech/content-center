@@ -1,0 +1,28 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.playwright-cli/
+
+# Local secrets and generated operational data
+.env
+*.env
+*.pem
+*.key
+*.p12
+*.pfx
+*.dump
+*.sql
+credentials/
+output/
+backups/
+scans/raw/
+*.log
+
+# Editor and operating-system state
+.idea/
+.vscode/
+.DS_Store

@@ -1,0 +1,17 @@
+{
+    "name": "Content Center - Sales",
+    "summary": "Consult company and product content from quotations and orders",
+    "version": "16.0.2.0.0",
+    "category": "Sales",
+    "author": "Soloz Technologies",
+    "website": "https://github.com/soloztech/content-center",
+    "license": "AGPL-3",
+    "depends": ["content_center_base", "sale"],
+    "data": ["views/sale_order_views.xml"],
+    "pre_init_hook": "pre_init_hook",
+    "post_init_hook": "post_init_hook",
+    "uninstall_hook": "uninstall_hook",
+    "installable": True,
+    "application": False,
+    "auto_install": False,
+}

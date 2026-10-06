@@ -1,0 +1,25 @@
+{
+  "ir.model.relation": [
+    "marketing_center_catalog_item_product_product_rel",
+    "marketing_center_catalog_item_product_template_rel",
+    "marketing_center_catalog_subject_product_product_rel",
+    "marketing_center_catalog_subject_product_template_rel"
+  ],
+  "ir.model.constraint": [
+    "marketing_center_catalog_ite_marketing_center_catalog_ite_fkey1",
+    "marketing_center_catalog_item_company_id_fkey",
+    "marketing_center_catalog_item_create_uid_fkey",
+    "marketing_center_catalog_item_marketing_center_catalog_ite_fkey",
+    "marketing_center_catalog_item_product__product_template_id_fkey",
+    "marketing_center_catalog_item_product_p_product_product_id_fkey",
+    "marketing_center_catalog_item_subject_id_fkey",
+    "marketing_center_catalog_item_write_uid_fkey",
+    "marketing_center_catalog_sub_marketing_center_catalog_sub_fkey1",
+    "marketing_center_catalog_subj_marketing_center_catalog_sub_fkey",
+    "marketing_center_catalog_subject_company_id_fkey",
+    "marketing_center_catalog_subject_create_uid_fkey",
+    "marketing_center_catalog_subject_produ_product_template_id_fkey",
+    "marketing_center_catalog_subject_produc_product_product_id_fkey",
+    "marketing_center_catalog_subject_write_uid_fkey"
+  ]
+}
