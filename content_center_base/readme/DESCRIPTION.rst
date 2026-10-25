@@ -3,7 +3,7 @@ Marketing and engineering maintain subjects containing formatted text, FAQs,
 files and external links. Sales and support can consult the same current source.
 
 This standalone application does not require the Marketing Center analytics
-suite. Optional addons connect the library to Sales and Contact Center.
+suite. An optional addon connects the library to Sales.
 
 * Save content directly, edit it in place and archive it when no longer useful.
 * Keep structured information and frequently asked questions together in each subject.

@@ -30,6 +30,7 @@ remain accessible to authorized users through the regular management screens.
 Optional integrations:
 
 * ``content_center_sale`` adds the library to quotations and orders.
+
 Editing or archiving the library does not rewrite previously prepared drafts or
 sent messages. Native record identifiers and modification dates support later
 integrations, without promising immutable historical sources.

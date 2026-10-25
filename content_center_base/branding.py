@@ -4,12 +4,12 @@ LABELS = {
         "content_center_base.menu_catalog_root": (
             "name",
             "Content Center",
-            "Central de " "Conteúdo",
+            "Central de Conteúdo",
         ),
         "content_center_base.module_category_content_catalog": (
             "name",
-            "Content " "Center",
-            "Central " "de " "Conteúdo",
+            "Content Center",
+            "Central de Conteúdo",
         ),
         "base.module_content_center_base": (
             "shortdesc",
@@ -21,8 +21,8 @@ LABELS = {
         "base.module_content_center_sale": (
             "shortdesc",
             "Content Center - Sales",
-            "Central de Conteúdo - " "Vendas",
-        )
+            "Central de Conteúdo - Vendas",
+        ),
     },
 }
 

@@ -27,7 +27,7 @@ Marketing and engineering maintain subjects containing formatted text, FAQs,
 files and external links. Sales and support can consult the same current source.
 
 This standalone application does not require the Marketing Center analytics
-suite. Optional addons connect the library to Sales and Contact Center.
+suite. An optional addon connects the library to Sales.
 
 * Save content directly, edit it in place and archive it when no longer useful.
 * Keep structured information and frequently asked questions together in each subject.
@@ -100,6 +100,7 @@ remain accessible to authorized users through the regular management screens.
 Optional integrations:
 
 * ``content_center_sale`` adds the library to quotations and orders.
+
 Editing or archiving the library does not rewrite previously prepared drafts or
 sent messages. Native record identifiers and modification dates support later
 integrations, without promising immutable historical sources.
