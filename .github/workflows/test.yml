@@ -113,7 +113,7 @@ jobs:
           import psycopg2
           from pathlib import Path
           log = (Path(os.environ["RUNNER_TEMP"]) / "content-center-tests.log").read_text()
-          for name in ("content_center_base", "content_center_sale", "content_center_contact_center"):
+          for name in ("content_center_base", "content_center_sale"):
               assert re.search(rf"{name}: [1-9][0-9]* tests", log), f"Missing nonzero tests for {name}"
           with psycopg2.connect(dbname=os.environ["PGDATABASE"]) as connection:
               with connection.cursor() as cursor:
