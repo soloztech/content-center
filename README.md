@@ -9,7 +9,8 @@ Direct editing, saving and archiving; authenticated access.
 | `content_center_sale` | Consult materials from quotations and sales orders | Base + native sale |
 
 Base installs without CRM or Marketing Center. Bridges are optional and never
-install automatically.  Materials stay private and obey catalog permissions and company rules.
+install automatically. Materials stay private and obey catalog permissions and
+company rules.
 
 Official branch: **16.0**, AGPL-3. Extracted from
 [Marketing Center](https://github.com/soloztech/marketing-center), retaining
