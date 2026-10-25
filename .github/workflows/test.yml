@@ -2,11 +2,6 @@ name: tests
 
 on:
   workflow_dispatch:
-    inputs:
-      peer_ref:
-        description: "Full Contact Center commit SHA for coordinated release validation"
-        required: false
-        type: string
   pull_request:
     branches:
       - "16.0*"
@@ -48,7 +43,6 @@ jobs:
     name: ${{ matrix.name }}
     env:
       PIP_CONSTRAINT: ${{ github.workspace }}/constraints.txt
-      PEER_REF: ${{ inputs.peer_ref || 'b1b2b1a0743bb599626209d63e9ef0da8ebb6254' }}
     strategy:
       fail-fast: false
       matrix:
@@ -69,40 +63,6 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
-      - name: Validate coordinated dependency revision
-        shell: bash
-        run: |
-          if ! [[ "$PEER_REF" =~ ^[0-9a-f]{40}$ ]]; then
-            echo "peer_ref must be a full 40-character commit SHA."
-            exit 1
-          fi
-      - name: Checkout public Contact Center dependency
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-        with:
-          repository: soloztech/contact-center
-          # PRs use the validated compatible baseline; a manual release run
-          # selects the exact coordinated peer commit without rewriting the workflow.
-          ref: ${{ env.PEER_REF }}
-          fetch-depth: 0
-          path: .ci-private-dependency/contact-center
-          persist-credentials: false
-      - name: Verify Contact Center side panel compatibility
-        shell: bash
-        run: |
-          set -euo pipefail
-          peer_root="${GITHUB_WORKSPACE}/.ci-private-dependency/contact-center"
-          test "$(git -C "$peer_root" rev-parse HEAD)" = "$PEER_REF"
-          git -C "$peer_root" merge-base --is-ancestor \
-            9d7049915dd9941ece1e5167c6ca7153e2d5e5e3 "$PEER_REF"
-      - name: Install public Contact Center addon dependencies
-        shell: bash
-        run: |
-          set -euo pipefail
-          sibling_parent="$(mktemp -d "${RUNNER_TEMP}/content-center-ci.XXXXXX")"
-          sibling_root="${sibling_parent}/contact-center"
-          mv "${GITHUB_WORKSPACE}/.ci-private-dependency/contact-center" "${sibling_root}"
-          python -m pip install --editable "${sibling_root}/setup/contact_center_base"
-          python -m pip install --editable "${sibling_root}/setup/contact_center_ui"
       - name: Install addons and dependencies
         run: oca_install_addons
       - name: Check licenses
@@ -116,7 +76,7 @@ jobs:
           import psycopg2
           with psycopg2.connect(dbname="content_base_only") as connection:
               with connection.cursor() as cursor:
-                  cursor.execute("SELECT name FROM ir_module_module WHERE state='installed' AND (name='crm' OR name LIKE 'marketing_center_%' OR name IN ('content_center_sale','content_center_contact_center'))")
+                  cursor.execute("SELECT name FROM ir_module_module WHERE state='installed' AND (name='crm' OR name LIKE 'marketing_center_%' OR (name='content_center_sale' OR name LIKE 'contact_center%'))")
                   assert not cursor.fetchall(), "Base must install independently"
           PYTHON
       - name: Initialize test db
@@ -133,7 +93,6 @@ jobs:
           log = (Path(os.environ["RUNNER_TEMP"]) / "content-center-tests.log").read_text()
           for addon in (
               "content_center_base",
-              "content_center_contact_center",
           ):
               for mode in ("minified", "assets"):
                   marker = f"Content QUnit verified: {addon} {mode}"

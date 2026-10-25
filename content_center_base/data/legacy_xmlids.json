@@ -111,9 +111,6 @@
     "view_catalog_subject_search": "ir.ui.view",
     "view_catalog_subject_tree": "ir.ui.view"
   },
-  "marketing_center_catalog_contact_center": {
-    "model_contact_center_ui_api": "ir.model"
-  },
   "marketing_center_catalog_sale": {
     "model_sale_order": "ir.model",
     "view_order_form_content_catalog": "ir.ui.view"

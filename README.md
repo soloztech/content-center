@@ -7,7 +7,6 @@ Direct editing, saving and archiving; authenticated access.
 | --- | --- | --- |
 | `content_center_base` | Library, subjects, text/FAQ/files, product references, browser | Native product/mail/web/web_editor |
 | `content_center_sale` | Consult materials from quotations and sales orders | Base + native sale |
-| `content_center_contact_center` | Search and add materials to conversation drafts | Base + contact_center_ui |
 
 Base installs without CRM or Marketing Center. Bridges are optional and never
 install automatically. Adding content prepares a draft; the agent chooses when
