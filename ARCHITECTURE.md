@@ -1,7 +1,7 @@
 # Architecture
 
-`content_center_base` owns authenticated knowledge and media.
-`content_center_sale` connects published content to sales orders.
+`content_center_base` owns authenticated knowledge and media. `content_center_sale`
+connects published content to sales orders.
 
 Existing `marketing.center.catalog.subject` / `marketing.center.catalog.item` models,
 tables and fields are intentionally retained. XML namespaces and addon ownership are
