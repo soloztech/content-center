@@ -76,6 +76,10 @@ jobs:
             echo "peer_ref must be a full 40-character commit SHA."
             exit 1
           fi
+      - name: Install SSH client for private dependency
+        run: |
+          apt-get update -qq
+          apt-get install -y --no-install-recommends openssh-client
       - name: Checkout private Contact Center dependency
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
