@@ -1,7 +1,7 @@
 {
     "name": "Content Center",
     "summary": "Company and product content, files and FAQs for sales and support",
-    "version": "16.0.2.0.1",
+    "version": "16.0.2.0.2",
     "category": "Marketing",
     "author": "Soloz Technologies",
     "website": "https://github.com/soloztech/content-center",

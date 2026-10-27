@@ -10,10 +10,12 @@ from odoo.exceptions import ValidationError
 
 MODULES = {
     "marketing_center_catalog": "content_center_base",
+    "marketing_center_catalog_contact_center": "content_center_contact_center",
     "marketing_center_catalog_sale": "content_center_sale",
 }
 VERSIONS = {
     "marketing_center_catalog": "16.0.1.2.0",
+    "marketing_center_catalog_contact_center": "16.0.1.1.0",
     "marketing_center_catalog_sale": "16.0.1.1.0",
 }
 INFO_FIELDS = (

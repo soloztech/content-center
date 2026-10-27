@@ -24,6 +24,13 @@ LABELS = {
             "Central de Conteúdo - Vendas",
         ),
     },
+    "content_center_contact_center": {
+        "base.module_content_center_contact_center": (
+            "shortdesc",
+            "Content Center - Contact Center",
+            "Central de Conteúdo - Contact Center",
+        ),
+    },
 }
 
 

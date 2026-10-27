@@ -1,10 +1,5 @@
 # Upgrade from Marketing Center Catalog
 
-> Historical procedure from 2026-10-05. The Contact Center bridge was retired in
-> `content_center_base` 16.0.2.0.1. The current transition helper supports only base and
-> base with Sale. The three-addon profiles and recovery table below describe the
-> original release and must not be applied with the current helper.
-
 Supported origins: `marketing_center_catalog` 16.0.1.2.0 and its optional bridges
 16.0.1.1.0. New modules are 16.0.2.0.0. Supported profiles: base only, base with one
 bridge, all three. Fresh installations do not need this transition.
